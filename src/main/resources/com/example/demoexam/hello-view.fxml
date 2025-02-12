@@ -23,18 +23,18 @@
     </ScrollPane>
     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
         <children>
-            <Button alignment="CENTER" contentDisplay="BOTTOM" prefHeight="26.0" prefWidth="150.0" text="Обновить">
+            <Button alignment="CENTER" contentDisplay="BOTTOM" onAction="#updateListMembers" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #B11AED;" text="Обновить" textFill="#e1dfdf">
                 <HBox.margin>
                     <Insets left="50.0" right="50.0" />
                 </HBox.margin>
             </Button>
 
-            <Button alignment="CENTER" contentDisplay="BOTTOM" prefHeight="23.0" prefWidth="150.0" text="Добавить">
+            <Button alignment="CENTER" contentDisplay="BOTTOM" prefHeight="23.0" prefWidth="150.0" style="-fx-background-color: #B11AED;" text="Добавить" textFill="#e1dfdf">
                 <HBox.margin>
                     <Insets left="50.0" right="50.0" />
                 </HBox.margin>
             </Button>
-            <Button alignment="CENTER" contentDisplay="BOTTOM" prefHeight="26.0" prefWidth="150.0" text="Удалить">
+            <Button alignment="CENTER" contentDisplay="BOTTOM" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #B11AED;" text="Удалить" textFill="#e1dfdf">
                 <HBox.margin>
                     <Insets left="50.0" right="50.0" />
                 </HBox.margin>

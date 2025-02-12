@@ -39,5 +39,17 @@ CREATE TABLE expence_product (
 
 \COPY expence_product (purchase_date, fio, product_name, quantity) FROM '/home/goga_rid/ГИА/демо задание/Ресурсы/Expence_product_import.csv' DELIMITER ',' CSV HEADER;
 
+UPDATE expence_product ep
+SET member_id = (SELECT fm.member_id FROM family_members fm WHERE fm.fio = ep.fio LIMIT 1),
+    product_id = (SELECT p.product_id FROM product p WHERE p.product_name = ep.product_name LIMIT 1)
+WHERE member_id IS NULL OR product_id IS NULL; -- подтягивание для внешних ключов
 
+UPDATE family_members_job fmj
+SET member_id = (SELECT fm.member_id FROM family_members fm WHERE fm.fio = fmj.fio LIMIT 1)
+WHERE member_id IS NULL; -- подтягивание для внешних ключов
+
+
+
+ALTER TABLE family_members_job
+    ADD COLUMN total_expenses INT DEFAULT 0;     -- Поле для общих расходов
 
